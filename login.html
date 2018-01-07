@@ -1,0 +1,112 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1"><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="stylesheet" href="css/style01_S.css" type="text/css" /><title>
+	臺北市公共運輸處小型復康巴士民眾網路訂車系統
+</title></head>
+<body>
+  <form name="form1" method="post" action="https://40556789.taipei.gov.tw/FKCS_PUB2/login.aspx" id="form1">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNDYwODE4NTg2D2QWAgIDD2QWBgIGDxYCHgdWaXNpYmxlaGQCCQ8PFgIeBFRleHQFCzAyLTQwNTU2Nzg5ZGQCCg88KwARAwAPFgQeC18hRGF0YUJvdW5kZx4LXyFJdGVtQ291bnQCAmQBEBYAFgAWAAwUKwAAFgJmD2QWBgIBD2QWBGYPDxYCHwEFCTEwNi0xMC0zMGRkAgEPDxYCHwEFNuW+qeW6t+iqnumfs+iogui7iuezu+e1seaWsOWinuWEquWFiOaMh+WumualreiAheWKn+iDvWRkAgIPZBYEZg8PFgIfAQUJMTA0LTA3LTE0ZGQCAQ8PFgIfAQUb5pyJ6Zec5oyH5rS+6auY6aCC6LuK5LqL5a6cZGQCAw8PFgIfAGhkZBgBBQlHcmlkVmlldzEPPCsADAEIAgFk13VS2jTIoWpWEIEfyasdi1uVxd7FcJr/XJabIdXKKi0=" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="A3F67477" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAfR6rjfzNOUMsbiMePjKEp/J0rmXvaagsJh+WRI43+04c/4F7AZ4QgMNMx7zBqZcRKfdOg2fcHrP1vgRyL/R5dFshCT4q90vziZH2FxDPZECO4sciJO3Hoc68xTFtZGQEhSxmF4ASyWHg6UmxHGOedlpPAocMERkQSim92xEdshVuPA07rJhyB/geI8oaD2QRI=" />
+</div>
+          <input name="Screen_w" type="text" id="Screen_w" style="display:none" />
+        <input name="Screen_h" type="text" id="Screen_h" style="display:none" />
+<table border="0" cellpadding="0" cellspacing="0" class="loginbg">
+  <tr>
+    <td>
+    <div class="logintablediv">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="login">
+    <!--暫時增加測試使用訊息-->
+      <tr>
+    	<span id="clockbox"></span></font>  <br>
+	  ※如有操作及訂車上問題，請撥客服專線02-40556789洽詢。
+        </td>
+      </tr>
+      <tr>
+        <th height="35">帳號</th>
+        <td> <input name="userid" type="text" maxlength="20" id="userid" value="" style="width:150px;" /></td>
+        </tr>
+      <tr>
+        <th height="35">密碼</th>
+        <td><input name="password" type="password" maxlength="20" id="password" value="" style="width:150px;" /></td>
+        </tr>
+      
+      <tr>
+        <th>&nbsp;</th>
+        <td height="35"><input type="submit" name="ctl05" value="登入" class="btn_grey" />
+        <input ID="Button1" type="button" value="忘記密碼" class="btn_grey" onclick="openwin2();"  onkeypress="" />
+            <br /> <span id="loginMsg" class="font_message_r"></span></td>
+        </tr>
+    </table>
+    </div>
+        </tr>
+    </table>     
+    </div>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+    function openwin() {
+        window.open("https://40556789.taipei.gov.tw/FKCS_PUB2/FKCSb006/FKCSb006I1.aspx", 'acc_new', 'width=650,height=650,menubar=no,resizable=yes,scrollbars=yes,status=yes,titlebar=yes,location=no');
+    }
+    function openwin2() {
+        window.open("https://40556789.taipei.gov.tw/FKCS_PUB2/FKCSb008/FKCSb008I1.aspx", 'reset_pwd', 'width=650,height=300,menubar=no,resizable=yes,scrollbars=yes,status=yes,titlebar=yes,location=no');
+    }
+    function openwin3() {
+        window.open("https://40556789.taipei.gov.tw/FKCS_PUB2/FKCSb009/FKCSb009I1.aspx", 'mail_box', 'width=760,height=500,menubar=no,resizable=yes,scrollbars=yes,status=yes,titlebar=yes,location=no');
+    }
+    function getcode() {
+        document.getElementById("safecode").src = "https://40556789.taipei.gov.tw/FKCS_PUB2/captcha/Safecode.asp?" + Math.random();
+    }
+
+var currenttime = document.getElementById("hf_sys_time").value;
+
+var serverdate = new Date(currenttime);
+
+ 
+
+function padlength(what) {
+
+   var output = (what.toString().length == 1) ? "0" + what : what;
+
+   return output;
+
+}
+
+ 
+
+function displaytime() {
+
+    serverdate.setSeconds(serverdate.getSeconds() + 1);
+
+    var timestring = padlength(serverdate.getHours()) + ":" + padlength(serverdate.getMinutes()) + ":" + padlength(serverdate.getSeconds());
+
+    document.getElementById("clockbox").innerHTML = timestring;
+
+}
+
+ 
+
+window.onload = function () {
+
+     setInterval("displaytime()", 1000);
+
+}
+
+
+
+
+</script>
+  </form>
+</body>
+
+</html>
