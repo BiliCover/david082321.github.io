@@ -1,4 +1,4 @@
- # 宽/高
+# 宽/高
 # 1.333
 2732x2048(PC)
 http://app.bilibili.com/x/v2/splash?mobi_app=hd&width=1080&height=720
