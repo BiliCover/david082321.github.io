@@ -136,7 +136,7 @@ for(tid=1;tid<200;tid++){
       if (prediction > line[1][0]) {
         line[1] = [prediction, aid]
       }
-      var str2 = '您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审<br/>'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+      var str2 = '您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审<br/>'
       var str = str + str2
     .fail(function() {
       console.log('failed!')
