@@ -138,6 +138,8 @@ for(tid=1;tid<200;tid++){
       }
       var str2 = '您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审<br/>'
       str = str + str2;
+      alert(tid);
+      alert(str);
     .fail(function() {
       console.log('failed!')
     })}
