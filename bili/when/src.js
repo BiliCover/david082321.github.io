@@ -110,9 +110,100 @@ function getData(page) {
     type: "get"
   })
 }
-
 function buttonClick() {
-var str = ""
+  buttonClickAll(1)
+  buttonClickAll(24)
+  buttonClickAll(25)
+  buttonClickAll(27)
+  buttonClickAll(47)
+  buttonClickAll(3)
+  buttonClickAll(28)
+  buttonClickAll(29)
+  buttonClickAll(30)
+  buttonClickAll(31)
+  buttonClickAll(54)
+  buttonClickAll(59)
+  buttonClickAll(130)
+  buttonClickAll(4)
+  buttonClickAll(17)
+  buttonClickAll(19)
+  buttonClickAll(65)
+  buttonClickAll(121)
+  buttonClickAll(136)
+  buttonClickAll(171)
+  buttonClickAll(172)
+  buttonClickAll(173)
+  buttonClickAll(5)
+  buttonClickAll(71)
+  buttonClickAll(131)
+  buttonClickAll(137)
+  buttonClickAll(11)
+  buttonClickAll(185)
+  buttonClickAll(187)
+  buttonClickAll(13)
+  buttonClickAll(32)
+  buttonClickAll(33)
+  buttonClickAll(51)
+  buttonClickAll(152)
+  buttonClickAll(23)
+  buttonClickAll(83)
+  buttonClickAll(145)
+  buttonClickAll(146)
+  buttonClickAll(147)
+  buttonClickAll(36)
+  buttonClickAll(39)
+  buttonClickAll(95)
+  buttonClickAll(96)
+  buttonClickAll(98)
+  buttonClickAll(122)
+  buttonClickAll(124)
+  buttonClickAll(176)
+  buttonClickAll(119)
+  buttonClickAll(22)
+  buttonClickAll(26)
+  buttonClickAll(126)
+  buttonClickAll(127)
+  buttonClickAll(129)
+  buttonClickAll(20)
+  buttonClickAll(154)
+  buttonClickAll(156)
+  buttonClickAll(155)
+  buttonClickAll(157)
+  buttonClickAll(158)
+  buttonClickAll(159)
+  buttonClickAll(164)
+  buttonClickAll(160)
+  buttonClickAll(21)
+  buttonClickAll(75)
+  buttonClickAll(76)
+  buttonClickAll(138)
+  buttonClickAll(161)
+  buttonClickAll(162)
+  buttonClickAll(163)
+  buttonClickAll(174)
+  buttonClickAll(175)
+  buttonClickAll(165)
+  buttonClickAll(166)
+  buttonClickAll(167)
+  buttonClickAll(153)
+  buttonClickAll(168)
+  buttonClickAll(169)
+  buttonClickAll(170)
+  buttonClickAll(177)
+  buttonClickAll(37)
+  buttonClickAll(178)
+  buttonClickAll(179)
+  buttonClickAll(180)
+  buttonClickAll(181)
+  buttonClickAll(85)
+  buttonClickAll(86)
+  buttonClickAll(182)
+  buttonClickAll(183)
+  buttonClickAll(184)
+}
+
+
+function buttonClickAll() {
 for(tid=1;tid<200;tid++){
   $.when(getData(1), getData(2))
     .done(function() {
@@ -136,14 +227,11 @@ for(tid=1;tid<200;tid++){
       if (prediction > line[1][0]) {
         line[1] = [prediction, aid]
       }
-      var str2 = '您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审<br/>'
-      str = str + str2;
-      alert(tid);
-      alert(str);
+      document.getElementById(prediction).innerHTML =
+        '您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+    })
     .fail(function() {
       console.log('failed!')
-    })}
-      document.getElementById(prediction).innerHTML = str
     })
   String.prototype.format = function(args) {
     var result = this;
