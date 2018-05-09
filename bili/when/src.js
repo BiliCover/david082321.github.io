@@ -1,4 +1,4 @@
-﻿var tid = 1
+var tid = 1
 var areaName = ''
 var dat = new Array()
 var areaId = ''
@@ -111,8 +111,7 @@ function getData(page) {
   })
 }
 
-function buttonClick(i) {
-  tid = i
+function buttonClick() {
   $.when(getData(1), getData(2))
     .done(function() {
       dat = []
@@ -137,6 +136,83 @@ function buttonClick(i) {
       }
       document.getElementById("prediction").innerHTML =
         '您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+      Highcharts.chart('container', {
+        title: {
+          text: areaName
+        },
+        chart: {
+          zoomType: 'x',
+          height: 600,
+          width: 840
+        },
+        xAxis: {
+          title: {
+            text: '过审时间',
+            style: {
+              fontSize: "18px",
+            }
+          },
+          min: line[0][0],
+          max: Math.max(line[1][0], prediction),
+          type: 'datetime',
+          minTickInterval: 100,
+          dateTimeLabelFormats: {
+            day: '%H:%M'
+          }
+        },
+        yAxis: {
+          title: {
+            text: ''
+          },
+          min: line[0][1],
+          max: Math.max(line[1][1], aid),
+          labels: {
+            formatter: function() {
+              return this.value
+            }
+          }
+        },
+        tooltip: {
+          formatter: function() {
+            var d = new Date(this.x);
+            var s = '<b>' + d.toLocaleString() + '</b>';
+            s += '<br/><span style="color:' + 'black' + '">' + 'av' +
+              this.point.y.toFixed(0) + ' </span>';
+            return s;
+          }
+        },
+        series: [{
+          name: '实际',
+          color: 'red',
+          type: 'scatter',
+          events: {
+            click: function(e) {
+              window.open("https://www.bilibili.com/video/av" + e.point.y);
+            }
+          },
+          data: dat
+        }, {
+          name: '拟合',
+          color: 'blue',
+          type: 'spline',
+          marker: {
+            enabled: false
+          },
+          data: line
+        }, {
+          name: '预测',
+          color: 'orange',
+          type: 'scatter',
+          marker: {
+            symbol: 'square',
+            radius: 10
+          },
+          data: [
+            [prediction, aid]
+          ]
+        }]
+      });
+    })
     .fail(function() {
       console.log('failed!')
       alert("无法获取稿件数据，请检查网络连接")
