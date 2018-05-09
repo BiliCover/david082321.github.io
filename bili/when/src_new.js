@@ -55,6 +55,7 @@ Highcharts.dateFormat('%m-%d %H:%M')
 
 
 function buttonClick() {
+	document.getElementById("hidden").innerText ="0";
 	buttonClick24()
 	buttonClick25()
 	buttonClick27()
@@ -128,6 +129,7 @@ function buttonClick() {
     buttonClick182()
     buttonClick183()
     buttonClick184()
+	document.getElementById("count123").style.display = "inline";
 }
 function buttonClickOld() {
   $.getJSON("https://www.wuyingddg.cn/whenPass/bilibili_data/" + tid + ".json", function(result, status) {
@@ -270,7 +272,8 @@ function buttonClick24() {
             line[1] = [prediction, aid]
           }
 		  document.getElementById("prediction24").innerHTML =
-            '您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (动画 → MAD·AMV)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+            '您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (动画 → MAD·AMV)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction));
+		  document.getElementById("hidden24").innerText = prediction;
         } else {
           alert("网络异常，请稍后再试")
           return
@@ -315,6 +318,7 @@ function buttonClick25() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction25").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (动画 → MMD·3D)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden25").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -334,6 +338,7 @@ function buttonClick27() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction27").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (动画 → 综合)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden27").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -353,6 +358,7 @@ function buttonClick47() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction47").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (动画 → 短片·手书·配音)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden47").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -372,6 +378,7 @@ function buttonClick28() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction28").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (音乐 → 原创音乐)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden28").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -391,6 +398,7 @@ function buttonClick29() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction29").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (音乐 → 三次元音乐)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden29").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -410,6 +418,7 @@ function buttonClick30() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction30").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (音乐 → VOCALOID·UTAU)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden30").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -429,6 +438,7 @@ function buttonClick31() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction31").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (音乐 → 翻唱)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden31").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -448,6 +458,7 @@ function buttonClick54() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction54").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (音乐 → OP/ED/OST)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden54").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -467,6 +478,7 @@ function buttonClick59() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction59").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (音乐 → 演奏)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden59").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -486,6 +498,7 @@ function buttonClick130() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction130").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (音乐 → 音乐选集)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden130").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -505,6 +518,7 @@ function buttonClick17() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction17").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (游戏 → 单机联机)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden17").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -524,6 +538,7 @@ function buttonClick19() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction19").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (游戏 → Mugen)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden19").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -543,6 +558,7 @@ function buttonClick65() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction65").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (游戏 → 网络游戏)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden65").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -562,6 +578,7 @@ function buttonClick121() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction121").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (游戏 → GMV)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden121").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -581,6 +598,7 @@ function buttonClick136() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction136").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (游戏 → 音游)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden136").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -600,6 +618,7 @@ function buttonClick171() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction171").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (游戏 → 电子竞技)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden171").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -619,6 +638,7 @@ function buttonClick172() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction172").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (游戏 → 手机游戏)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden172").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -638,6 +658,7 @@ function buttonClick173() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction173").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (游戏 → 桌游棋牌)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden173").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -657,6 +678,7 @@ function buttonClick71() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction71").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (娱乐 → 综艺)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden71").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -676,6 +698,7 @@ function buttonClick131() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction131").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (娱乐 → Korea相关)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden131").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -695,6 +718,7 @@ function buttonClick137() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction137").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (娱乐 → 明星)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden137").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -714,6 +738,7 @@ function buttonClick185() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction185").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (电视剧 → 国产剧)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden185").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -733,6 +758,7 @@ function buttonClick187() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction187").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (电视剧 → 海外剧)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden187").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -752,6 +778,7 @@ function buttonClick32() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction32").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (番剧 → 完结动画)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden32").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -771,6 +798,7 @@ function buttonClick33() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction33").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (番剧 → 连载动画)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden33").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -790,6 +818,7 @@ function buttonClick51() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction51").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (番剧 → 资讯)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden51").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -809,6 +838,7 @@ function buttonClick152() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction152").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (番剧 → 官方延伸)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden152").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -828,6 +858,7 @@ function buttonClick83() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction83").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (电影 → 其他国家)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden83").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -847,6 +878,7 @@ function buttonClick145() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction145").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (电影 → 欧美电影)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden145").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -866,6 +898,7 @@ function buttonClick146() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction146").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (电影 → 日本电影)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden146").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -885,6 +918,7 @@ function buttonClick147() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction147").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (电影 → 国产电影)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden147").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -904,6 +938,7 @@ function buttonClick39() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction39").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (科技 → 演讲· 公开课)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden39").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -923,6 +958,7 @@ function buttonClick95() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction95").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (科技 → 数码)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden95").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -942,6 +978,7 @@ function buttonClick96() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction96").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (科技 → 星海)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden96").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -961,6 +998,7 @@ function buttonClick98() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction98").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (科技 → 机械)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden98").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -980,6 +1018,7 @@ function buttonClick122() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction122").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (科技 → 野生技术协会)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden122").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -999,6 +1038,7 @@ function buttonClick124() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction124").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (科技 → 趣味科普人文)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden124").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -1018,6 +1058,7 @@ function buttonClick176() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction176").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (科技 → 汽车)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden176").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -1037,6 +1078,7 @@ function buttonClick22() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction22").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (鬼畜 → 鬼畜调教)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden22").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -1056,6 +1098,7 @@ function buttonClick26() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction26").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (鬼畜 → 音MAD)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden26").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -1075,6 +1118,7 @@ function buttonClick126() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction126").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (鬼畜 → 人力VOCALOID)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden126").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -1094,6 +1138,7 @@ function buttonClick127() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction127").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (鬼畜 → 教程演示)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden127").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -1113,6 +1158,7 @@ function buttonClick20() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction20").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (舞蹈 → 宅舞)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden20").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -1132,6 +1178,7 @@ function buttonClick154() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction154").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (舞蹈 → 三次元舞蹈)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden154").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -1151,6 +1198,7 @@ function buttonClick156() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction156").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (舞蹈 → 舞蹈教程)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden156").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -1170,6 +1218,7 @@ function buttonClick157() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction157").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (时尚 → 美妆)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden157").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -1189,6 +1238,7 @@ function buttonClick158() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction158").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (时尚 → 服饰)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden158").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -1208,6 +1258,7 @@ function buttonClick159() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction159").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (时尚 → 资讯)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden159").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -1227,6 +1278,7 @@ function buttonClick164() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction164").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (时尚 → 健身)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden164").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -1246,6 +1298,7 @@ function buttonClick21() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction21").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (生活 → 日常)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden21").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -1265,6 +1318,7 @@ function buttonClick75() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction75").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (生活 → 动物圈)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden75").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -1284,6 +1338,7 @@ function buttonClick76() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction76").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (生活 → 美食圈)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden76").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -1303,6 +1358,7 @@ function buttonClick138() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction138").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (生活 → 搞笑)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden138").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -1322,6 +1378,7 @@ function buttonClick161() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction161").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (生活 → 手工)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden161").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -1341,6 +1398,7 @@ function buttonClick162() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction162").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (生活 → 绘画)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden162").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -1360,6 +1418,7 @@ function buttonClick163() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction163").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (生活 → 运动)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden163").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -1379,6 +1438,7 @@ function buttonClick174() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction174").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (生活 → 其他)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden174").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -1398,6 +1458,7 @@ function buttonClick175() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction175").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (生活 → ASMR)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden175").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -1417,6 +1478,7 @@ function buttonClick166() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction166").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (广告 → 广告)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden166").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -1436,6 +1498,7 @@ function buttonClick153() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction153").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (国创 → 国产动画)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden153").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -1455,6 +1518,7 @@ function buttonClick168() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction168").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (国创 → 国产原创相关)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden168").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -1474,6 +1538,7 @@ function buttonClick169() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction169").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (国创 → 布袋戏)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden169").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -1493,6 +1558,7 @@ function buttonClick170() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction170").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (国创 → 资讯)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden170").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -1512,6 +1578,7 @@ function buttonClick37() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction37").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (纪录片 → 人文·历史)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden37").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -1531,6 +1598,7 @@ function buttonClick178() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction178").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (纪录片 → 科学·探索·自然)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden178").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -1550,6 +1618,7 @@ function buttonClick179() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction179").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (纪录片 → 军事)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden179").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -1569,6 +1638,7 @@ function buttonClick180() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction180").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (纪录片 → 社会·美食·旅行)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden180").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -1588,6 +1658,7 @@ function buttonClick85() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction85").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (影视 → 短片)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden85").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -1607,6 +1678,7 @@ function buttonClick86() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction86").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (影视 → 特摄)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden86").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -1626,6 +1698,7 @@ function buttonClick182() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction182").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (影视 → 影视杂谈)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden182").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -1645,6 +1718,7 @@ function buttonClick183() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
 		  document.getElementById("prediction183").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (影视 → 影视剪辑)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden183").innerText = prediction;
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -1664,6 +1738,8 @@ function buttonClick184() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
 		  document.getElementById("prediction184").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (影视 → 预告·资讯)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+		  document.getElementById("hidden184").innerText = prediction;
+		  document.getElementById("hidden").innerText ="1";
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
@@ -1681,11 +1757,120 @@ function stdDev(a){
      }
      return Math.sqrt(sum/(l-1));
 }
-function end() {
-alert(prediction);
+function formatSeconds(value) { 
+    var theTime = parseInt(value);// 需要转换的时间秒 
+    var theTime1 = 0;// 分 
+    var theTime2 = 0;// 小时 
+    var theTime3 = 0;// 天
+    if(theTime > 60) { 
+        theTime1 = parseInt(theTime/60); 
+        theTime = parseInt(theTime%60); 
+        if(theTime1 > 60) { 
+            theTime2 = parseInt(theTime1/60); 
+            theTime1 = parseInt(theTime1%60); 
+            if(theTime2 > 24){
+                //大于24小时
+                theTime3 = parseInt(theTime2/24);
+                theTime2 = parseInt(theTime2%24);
+            }
+        } 
+    } 
+    var result = '';
+    if(theTime > 0){
+        result = ""+parseInt(theTime)+"秒";
+    }
+    if(theTime1 > 0) { 
+        result = ""+parseInt(theTime1)+"分"+result; 
+    } 
+    if(theTime2 > 0) { 
+        result = ""+parseInt(theTime2)+"小时"+result; 
+    } 
+    if(theTime3 > 0) { 
+        result = ""+parseInt(theTime3)+"天"+result; 
+    }
+    return result; 
+}
+function count() {
+var end = document.getElementById("hidden").innerText;
+if (end == 1){
+var hidden24 = document.getElementById("hidden24").innerText;
+var hidden25 = document.getElementById("hidden25").innerText;
+var hidden27 = document.getElementById("hidden27").innerText;
+var hidden47 = document.getElementById("hidden47").innerText;
+var hidden28 = document.getElementById("hidden28").innerText;
+var hidden29 = document.getElementById("hidden29").innerText;
+var hidden30 = document.getElementById("hidden30").innerText;
+var hidden31 = document.getElementById("hidden31").innerText;
+var hidden54 = document.getElementById("hidden54").innerText;
+var hidden59 = document.getElementById("hidden59").innerText;
+var hidden130 = document.getElementById("hidden130").innerText;
+var hidden17 = document.getElementById("hidden17").innerText;
+var hidden19 = document.getElementById("hidden19").innerText;
+var hidden65 = document.getElementById("hidden65").innerText;
+var hidden121 = document.getElementById("hidden121").innerText;
+var hidden136 = document.getElementById("hidden136").innerText;
+var hidden171 = document.getElementById("hidden171").innerText;
+var hidden172 = document.getElementById("hidden172").innerText;
+var hidden173 = document.getElementById("hidden173").innerText;
+var hidden71 = document.getElementById("hidden71").innerText;
+var hidden131 = document.getElementById("hidden131").innerText;
+var hidden137 = document.getElementById("hidden137").innerText;
+var hidden185 = document.getElementById("hidden185").innerText;
+var hidden187 = document.getElementById("hidden187").innerText;
+var hidden32 = document.getElementById("hidden32").innerText;
+var hidden33 = document.getElementById("hidden33").innerText;
+var hidden51 = document.getElementById("hidden51").innerText;
+var hidden152 = document.getElementById("hidden152").innerText;
+var hidden83 = document.getElementById("hidden83").innerText;
+var hidden145 = document.getElementById("hidden145").innerText;
+var hidden146 = document.getElementById("hidden146").innerText;
+var hidden147 = document.getElementById("hidden147").innerText;
+var hidden39 = document.getElementById("hidden39").innerText;
+var hidden95 = document.getElementById("hidden95").innerText;
+var hidden96 = document.getElementById("hidden96").innerText;
+var hidden98 = document.getElementById("hidden98").innerText;
+var hidden122 = document.getElementById("hidden122").innerText;
+var hidden124 = document.getElementById("hidden124").innerText;
+var hidden176 = document.getElementById("hidden176").innerText;
+var hidden22 = document.getElementById("hidden22").innerText;
+var hidden26 = document.getElementById("hidden26").innerText;
+var hidden126 = document.getElementById("hidden126").innerText;
+var hidden127 = document.getElementById("hidden127").innerText;
+var hidden20 = document.getElementById("hidden20").innerText;
+var hidden154 = document.getElementById("hidden154").innerText;
+var hidden156 = document.getElementById("hidden156").innerText;
+var hidden157 = document.getElementById("hidden157").innerText;
+var hidden158 = document.getElementById("hidden158").innerText;
+var hidden159 = document.getElementById("hidden159").innerText;
+var hidden164 = document.getElementById("hidden164").innerText;
+var hidden21 = document.getElementById("hidden21").innerText;
+var hidden75 = document.getElementById("hidden75").innerText;
+var hidden76 = document.getElementById("hidden76").innerText;
+var hidden138 = document.getElementById("hidden138").innerText;
+var hidden161 = document.getElementById("hidden161").innerText;
+var hidden162 = document.getElementById("hidden162").innerText;
+var hidden163 = document.getElementById("hidden163").innerText;
+var hidden174 = document.getElementById("hidden174").innerText;
+var hidden175 = document.getElementById("hidden175").innerText;
+var hidden166 = document.getElementById("hidden166").innerText;
+var hidden153 = document.getElementById("hidden153").innerText;
+var hidden168 = document.getElementById("hidden168").innerText;
+var hidden169 = document.getElementById("hidden169").innerText;
+var hidden170 = document.getElementById("hidden170").innerText;
+var hidden37 = document.getElementById("hidden37").innerText;
+var hidden178 = document.getElementById("hidden178").innerText;
+var hidden179 = document.getElementById("hidden179").innerText;
+var hidden180 = document.getElementById("hidden180").innerText;
+var hidden85 = document.getElementById("hidden85").innerText;
+var hidden86 = document.getElementById("hidden86").innerText;
+var hidden182 = document.getElementById("hidden182").innerText;
+var hidden183 = document.getElementById("hidden183").innerText;
+var hidden184 = document.getElementById("hidden184").innerText;
 // 计算均值 mean
-var evgtime = [1,2,3];
-alert("均值："+mean(evgtime));
-//计算标准差 sd
-alert("标准差："+stdDev(evgtime));
+var evgtime = [hidden24,hidden25,hidden27,hidden47,hidden28,hidden29,hidden30,hidden31,hidden54,hidden59,hidden130,hidden17,hidden19,hidden65,hidden121,hidden136,hidden171,hidden172,hidden173,hidden71,hidden131,hidden137,hidden32,hidden33,hidden51,hidden152,hidden83,hidden145,hidden146,hidden147,hidden39,hidden95,hidden96,hidden98,hidden122,hidden124,hidden176,hidden22,hidden26,hidden126,hidden127,hidden20,hidden154,hidden156,hidden157,hidden158,hidden159,hidden164,hidden21,hidden75,hidden76,hidden138,hidden161,hidden162,hidden163,hidden174,hidden175,hidden166,hidden153,hidden168,hidden169,hidden170,hidden37,hidden178,hidden179,hidden180,hidden85,hidden86,hidden182,hidden183,hidden184];
+
+alert("平均值："+Highcharts.dateFormat('%y-%m-%d %H:%M', mean(evgtime))+"\n最小值："+Highcharts.dateFormat('%y-%m-%d %H:%M', Math.min(...evgtime))+"\n最大值："+Highcharts.dateFormat('%y-%m-%d %H:%M', Math.max(...evgtime))+"\n(不计算电视剧)");
+//alert("平均值："+Highcharts.dateFormat('%y-%m-%d %H:%M', Math.min(...evgtime)));
+}
+else{alert("请等待页面加载完毕...");}
 }
