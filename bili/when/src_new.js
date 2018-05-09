@@ -83,7 +83,28 @@ function buttonClick() {
     buttonClick33()
     buttonClick51()
     buttonClick152()
-
+    buttonClick83()
+    buttonClick145()
+    buttonClick146()
+    buttonClick147()
+    buttonClick39()
+    buttonClick95()
+    buttonClick96()
+    buttonClick98()
+    buttonClick122()
+    buttonClick124()
+    buttonClick176()
+    buttonClick22()
+    buttonClick26()
+    buttonClick126()
+    buttonClick127()
+    buttonClick20()
+    buttonClick154()
+    buttonClick156()
+    buttonClick157()
+    buttonClick158()
+    buttonClick159()
+    buttonClick164()
     buttonClickOld()
 }
 function buttonClickOld() {
@@ -766,6 +787,424 @@ function buttonClick152() {
           ]
           if (prediction > line[1][0]){line[1] = [prediction, aid];}
           document.getElementById("prediction152").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (番剧 → 官方延伸)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+        } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
+  String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
+}
+function buttonClick83() {
+  $.getJSON("https://www.wuyingddg.cn/whenPass/bilibili_data/83.json", function(result, status) {
+    if (status == "success") {
+      dat = result.sort()
+      $.getJSON("https://www.wuyingddg.cn/whenPass/bilibili_data/83_model.json", function(result2, status) {
+        if (status == "success") {
+          [k, b] = result2
+          var aid = Number(document.getElementById("aid").value.replace(/[^0-9]/ig, ""))
+          var prediction = (aid - b) / k
+          var len = dat.length
+          var line = [
+            [dat[0][0], k * dat[0][0] + b],
+            [dat[len - 1][0], k * dat[len - 1][0] + b]
+          ]
+          if (prediction > line[1][0]){line[1] = [prediction, aid];}
+          document.getElementById("prediction83").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (电影 → 其他国家)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+        } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
+  String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
+}
+function buttonClick145() {
+  $.getJSON("https://www.wuyingddg.cn/whenPass/bilibili_data/145.json", function(result, status) {
+    if (status == "success") {
+      dat = result.sort()
+      $.getJSON("https://www.wuyingddg.cn/whenPass/bilibili_data/145_model.json", function(result2, status) {
+        if (status == "success") {
+          [k, b] = result2
+          var aid = Number(document.getElementById("aid").value.replace(/[^0-9]/ig, ""))
+          var prediction = (aid - b) / k
+          var len = dat.length
+          var line = [
+            [dat[0][0], k * dat[0][0] + b],
+            [dat[len - 1][0], k * dat[len - 1][0] + b]
+          ]
+          if (prediction > line[1][0]){line[1] = [prediction, aid];}
+          document.getElementById("prediction145").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (电影 → 欧美电影)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+        } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
+  String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
+}
+function buttonClick146() {
+  $.getJSON("https://www.wuyingddg.cn/whenPass/bilibili_data/146.json", function(result, status) {
+    if (status == "success") {
+      dat = result.sort()
+      $.getJSON("https://www.wuyingddg.cn/whenPass/bilibili_data/146_model.json", function(result2, status) {
+        if (status == "success") {
+          [k, b] = result2
+          var aid = Number(document.getElementById("aid").value.replace(/[^0-9]/ig, ""))
+          var prediction = (aid - b) / k
+          var len = dat.length
+          var line = [
+            [dat[0][0], k * dat[0][0] + b],
+            [dat[len - 1][0], k * dat[len - 1][0] + b]
+          ]
+          if (prediction > line[1][0]){line[1] = [prediction, aid];}
+          document.getElementById("prediction146").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (电影 → 日本电影)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+        } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
+  String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
+}
+function buttonClick147() {
+  $.getJSON("https://www.wuyingddg.cn/whenPass/bilibili_data/147.json", function(result, status) {
+    if (status == "success") {
+      dat = result.sort()
+      $.getJSON("https://www.wuyingddg.cn/whenPass/bilibili_data/147_model.json", function(result2, status) {
+        if (status == "success") {
+          [k, b] = result2
+          var aid = Number(document.getElementById("aid").value.replace(/[^0-9]/ig, ""))
+          var prediction = (aid - b) / k
+          var len = dat.length
+          var line = [
+            [dat[0][0], k * dat[0][0] + b],
+            [dat[len - 1][0], k * dat[len - 1][0] + b]
+          ]
+          if (prediction > line[1][0]){line[1] = [prediction, aid];}
+          document.getElementById("prediction147").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (电影 → 国产电影)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+        } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
+  String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
+}
+function buttonClick39() {
+  $.getJSON("https://www.wuyingddg.cn/whenPass/bilibili_data/39.json", function(result, status) {
+    if (status == "success") {
+      dat = result.sort()
+      $.getJSON("https://www.wuyingddg.cn/whenPass/bilibili_data/39_model.json", function(result2, status) {
+        if (status == "success") {
+          [k, b] = result2
+          var aid = Number(document.getElementById("aid").value.replace(/[^0-9]/ig, ""))
+          var prediction = (aid - b) / k
+          var len = dat.length
+          var line = [
+            [dat[0][0], k * dat[0][0] + b],
+            [dat[len - 1][0], k * dat[len - 1][0] + b]
+          ]
+          if (prediction > line[1][0]){line[1] = [prediction, aid];}
+          document.getElementById("prediction39").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (科技 → 演讲· 公开课)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+        } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
+  String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
+}
+function buttonClick95() {
+  $.getJSON("https://www.wuyingddg.cn/whenPass/bilibili_data/95.json", function(result, status) {
+    if (status == "success") {
+      dat = result.sort()
+      $.getJSON("https://www.wuyingddg.cn/whenPass/bilibili_data/95_model.json", function(result2, status) {
+        if (status == "success") {
+          [k, b] = result2
+          var aid = Number(document.getElementById("aid").value.replace(/[^0-9]/ig, ""))
+          var prediction = (aid - b) / k
+          var len = dat.length
+          var line = [
+            [dat[0][0], k * dat[0][0] + b],
+            [dat[len - 1][0], k * dat[len - 1][0] + b]
+          ]
+          if (prediction > line[1][0]){line[1] = [prediction, aid];}
+          document.getElementById("prediction95").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (科技 → 数码)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+        } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
+  String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
+}
+function buttonClick96() {
+  $.getJSON("https://www.wuyingddg.cn/whenPass/bilibili_data/96.json", function(result, status) {
+    if (status == "success") {
+      dat = result.sort()
+      $.getJSON("https://www.wuyingddg.cn/whenPass/bilibili_data/96_model.json", function(result2, status) {
+        if (status == "success") {
+          [k, b] = result2
+          var aid = Number(document.getElementById("aid").value.replace(/[^0-9]/ig, ""))
+          var prediction = (aid - b) / k
+          var len = dat.length
+          var line = [
+            [dat[0][0], k * dat[0][0] + b],
+            [dat[len - 1][0], k * dat[len - 1][0] + b]
+          ]
+          if (prediction > line[1][0]){line[1] = [prediction, aid];}
+          document.getElementById("prediction96").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (科技 → 星海)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+        } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
+  String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
+}
+function buttonClick98() {
+  $.getJSON("https://www.wuyingddg.cn/whenPass/bilibili_data/98.json", function(result, status) {
+    if (status == "success") {
+      dat = result.sort()
+      $.getJSON("https://www.wuyingddg.cn/whenPass/bilibili_data/98_model.json", function(result2, status) {
+        if (status == "success") {
+          [k, b] = result2
+          var aid = Number(document.getElementById("aid").value.replace(/[^0-9]/ig, ""))
+          var prediction = (aid - b) / k
+          var len = dat.length
+          var line = [
+            [dat[0][0], k * dat[0][0] + b],
+            [dat[len - 1][0], k * dat[len - 1][0] + b]
+          ]
+          if (prediction > line[1][0]){line[1] = [prediction, aid];}
+          document.getElementById("prediction98").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (科技 → 机械)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+        } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
+  String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
+}
+function buttonClick122() {
+  $.getJSON("https://www.wuyingddg.cn/whenPass/bilibili_data/122.json", function(result, status) {
+    if (status == "success") {
+      dat = result.sort()
+      $.getJSON("https://www.wuyingddg.cn/whenPass/bilibili_data/122_model.json", function(result2, status) {
+        if (status == "success") {
+          [k, b] = result2
+          var aid = Number(document.getElementById("aid").value.replace(/[^0-9]/ig, ""))
+          var prediction = (aid - b) / k
+          var len = dat.length
+          var line = [
+            [dat[0][0], k * dat[0][0] + b],
+            [dat[len - 1][0], k * dat[len - 1][0] + b]
+          ]
+          if (prediction > line[1][0]){line[1] = [prediction, aid];}
+          document.getElementById("prediction122").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (科技 → 野生技术协会)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+        } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
+  String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
+}
+function buttonClick124() {
+  $.getJSON("https://www.wuyingddg.cn/whenPass/bilibili_data/124.json", function(result, status) {
+    if (status == "success") {
+      dat = result.sort()
+      $.getJSON("https://www.wuyingddg.cn/whenPass/bilibili_data/124_model.json", function(result2, status) {
+        if (status == "success") {
+          [k, b] = result2
+          var aid = Number(document.getElementById("aid").value.replace(/[^0-9]/ig, ""))
+          var prediction = (aid - b) / k
+          var len = dat.length
+          var line = [
+            [dat[0][0], k * dat[0][0] + b],
+            [dat[len - 1][0], k * dat[len - 1][0] + b]
+          ]
+          if (prediction > line[1][0]){line[1] = [prediction, aid];}
+          document.getElementById("prediction124").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (科技 → 趣味科普人文)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+        } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
+  String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
+}
+function buttonClick176() {
+  $.getJSON("https://www.wuyingddg.cn/whenPass/bilibili_data/176.json", function(result, status) {
+    if (status == "success") {
+      dat = result.sort()
+      $.getJSON("https://www.wuyingddg.cn/whenPass/bilibili_data/176_model.json", function(result2, status) {
+        if (status == "success") {
+          [k, b] = result2
+          var aid = Number(document.getElementById("aid").value.replace(/[^0-9]/ig, ""))
+          var prediction = (aid - b) / k
+          var len = dat.length
+          var line = [
+            [dat[0][0], k * dat[0][0] + b],
+            [dat[len - 1][0], k * dat[len - 1][0] + b]
+          ]
+          if (prediction > line[1][0]){line[1] = [prediction, aid];}
+          document.getElementById("prediction176").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (科技 → 汽车)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+        } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
+  String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
+}
+function buttonClick22() {
+  $.getJSON("https://www.wuyingddg.cn/whenPass/bilibili_data/22.json", function(result, status) {
+    if (status == "success") {
+      dat = result.sort()
+      $.getJSON("https://www.wuyingddg.cn/whenPass/bilibili_data/22_model.json", function(result2, status) {
+        if (status == "success") {
+          [k, b] = result2
+          var aid = Number(document.getElementById("aid").value.replace(/[^0-9]/ig, ""))
+          var prediction = (aid - b) / k
+          var len = dat.length
+          var line = [
+            [dat[0][0], k * dat[0][0] + b],
+            [dat[len - 1][0], k * dat[len - 1][0] + b]
+          ]
+          if (prediction > line[1][0]){line[1] = [prediction, aid];}
+          document.getElementById("prediction22").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (鬼畜 → 鬼畜调教)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+        } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
+  String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
+}
+function buttonClick26() {
+  $.getJSON("https://www.wuyingddg.cn/whenPass/bilibili_data/26.json", function(result, status) {
+    if (status == "success") {
+      dat = result.sort()
+      $.getJSON("https://www.wuyingddg.cn/whenPass/bilibili_data/26_model.json", function(result2, status) {
+        if (status == "success") {
+          [k, b] = result2
+          var aid = Number(document.getElementById("aid").value.replace(/[^0-9]/ig, ""))
+          var prediction = (aid - b) / k
+          var len = dat.length
+          var line = [
+            [dat[0][0], k * dat[0][0] + b],
+            [dat[len - 1][0], k * dat[len - 1][0] + b]
+          ]
+          if (prediction > line[1][0]){line[1] = [prediction, aid];}
+          document.getElementById("prediction26").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (鬼畜 → 音MAD)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+        } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
+  String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
+}
+function buttonClick126() {
+  $.getJSON("https://www.wuyingddg.cn/whenPass/bilibili_data/126.json", function(result, status) {
+    if (status == "success") {
+      dat = result.sort()
+      $.getJSON("https://www.wuyingddg.cn/whenPass/bilibili_data/126_model.json", function(result2, status) {
+        if (status == "success") {
+          [k, b] = result2
+          var aid = Number(document.getElementById("aid").value.replace(/[^0-9]/ig, ""))
+          var prediction = (aid - b) / k
+          var len = dat.length
+          var line = [
+            [dat[0][0], k * dat[0][0] + b],
+            [dat[len - 1][0], k * dat[len - 1][0] + b]
+          ]
+          if (prediction > line[1][0]){line[1] = [prediction, aid];}
+          document.getElementById("prediction126").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (鬼畜 → 人力VOCALOID)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+        } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
+  String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
+}
+function buttonClick127() {
+  $.getJSON("https://www.wuyingddg.cn/whenPass/bilibili_data/127.json", function(result, status) {
+    if (status == "success") {
+      dat = result.sort()
+      $.getJSON("https://www.wuyingddg.cn/whenPass/bilibili_data/127_model.json", function(result2, status) {
+        if (status == "success") {
+          [k, b] = result2
+          var aid = Number(document.getElementById("aid").value.replace(/[^0-9]/ig, ""))
+          var prediction = (aid - b) / k
+          var len = dat.length
+          var line = [
+            [dat[0][0], k * dat[0][0] + b],
+            [dat[len - 1][0], k * dat[len - 1][0] + b]
+          ]
+          if (prediction > line[1][0]){line[1] = [prediction, aid];}
+          document.getElementById("prediction127").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (鬼畜 → 教程演示)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+        } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
+  String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
+}
+function buttonClick20() {
+  $.getJSON("https://www.wuyingddg.cn/whenPass/bilibili_data/20.json", function(result, status) {
+    if (status == "success") {
+      dat = result.sort()
+      $.getJSON("https://www.wuyingddg.cn/whenPass/bilibili_data/20_model.json", function(result2, status) {
+        if (status == "success") {
+          [k, b] = result2
+          var aid = Number(document.getElementById("aid").value.replace(/[^0-9]/ig, ""))
+          var prediction = (aid - b) / k
+          var len = dat.length
+          var line = [
+            [dat[0][0], k * dat[0][0] + b],
+            [dat[len - 1][0], k * dat[len - 1][0] + b]
+          ]
+          if (prediction > line[1][0]){line[1] = [prediction, aid];}
+          document.getElementById("prediction20").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (舞蹈 → 宅舞)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+        } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
+  String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
+}
+function buttonClick154() {
+  $.getJSON("https://www.wuyingddg.cn/whenPass/bilibili_data/154.json", function(result, status) {
+    if (status == "success") {
+      dat = result.sort()
+      $.getJSON("https://www.wuyingddg.cn/whenPass/bilibili_data/154_model.json", function(result2, status) {
+        if (status == "success") {
+          [k, b] = result2
+          var aid = Number(document.getElementById("aid").value.replace(/[^0-9]/ig, ""))
+          var prediction = (aid - b) / k
+          var len = dat.length
+          var line = [
+            [dat[0][0], k * dat[0][0] + b],
+            [dat[len - 1][0], k * dat[len - 1][0] + b]
+          ]
+          if (prediction > line[1][0]){line[1] = [prediction, aid];}
+          document.getElementById("prediction154").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (舞蹈 → 三次元舞蹈)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+        } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
+  String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
+}
+function buttonClick156() {
+  $.getJSON("https://www.wuyingddg.cn/whenPass/bilibili_data/156.json", function(result, status) {
+    if (status == "success") {
+      dat = result.sort()
+      $.getJSON("https://www.wuyingddg.cn/whenPass/bilibili_data/156_model.json", function(result2, status) {
+        if (status == "success") {
+          [k, b] = result2
+          var aid = Number(document.getElementById("aid").value.replace(/[^0-9]/ig, ""))
+          var prediction = (aid - b) / k
+          var len = dat.length
+          var line = [
+            [dat[0][0], k * dat[0][0] + b],
+            [dat[len - 1][0], k * dat[len - 1][0] + b]
+          ]
+          if (prediction > line[1][0]){line[1] = [prediction, aid];}
+          document.getElementById("prediction156").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (舞蹈 → 舞蹈教程)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+        } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
+  String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
+}
+function buttonClick157() {
+  $.getJSON("https://www.wuyingddg.cn/whenPass/bilibili_data/157.json", function(result, status) {
+    if (status == "success") {
+      dat = result.sort()
+      $.getJSON("https://www.wuyingddg.cn/whenPass/bilibili_data/157_model.json", function(result2, status) {
+        if (status == "success") {
+          [k, b] = result2
+          var aid = Number(document.getElementById("aid").value.replace(/[^0-9]/ig, ""))
+          var prediction = (aid - b) / k
+          var len = dat.length
+          var line = [
+            [dat[0][0], k * dat[0][0] + b],
+            [dat[len - 1][0], k * dat[len - 1][0] + b]
+          ]
+          if (prediction > line[1][0]){line[1] = [prediction, aid];}
+          document.getElementById("prediction157").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (时尚 → 美妆)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+        } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
+  String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
+}
+function buttonClick158() {
+  $.getJSON("https://www.wuyingddg.cn/whenPass/bilibili_data/158.json", function(result, status) {
+    if (status == "success") {
+      dat = result.sort()
+      $.getJSON("https://www.wuyingddg.cn/whenPass/bilibili_data/158_model.json", function(result2, status) {
+        if (status == "success") {
+          [k, b] = result2
+          var aid = Number(document.getElementById("aid").value.replace(/[^0-9]/ig, ""))
+          var prediction = (aid - b) / k
+          var len = dat.length
+          var line = [
+            [dat[0][0], k * dat[0][0] + b],
+            [dat[len - 1][0], k * dat[len - 1][0] + b]
+          ]
+          if (prediction > line[1][0]){line[1] = [prediction, aid];}
+          document.getElementById("prediction158").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (时尚 → 服饰)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+        } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
+  String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
+}
+function buttonClick159() {
+  $.getJSON("https://www.wuyingddg.cn/whenPass/bilibili_data/159.json", function(result, status) {
+    if (status == "success") {
+      dat = result.sort()
+      $.getJSON("https://www.wuyingddg.cn/whenPass/bilibili_data/159_model.json", function(result2, status) {
+        if (status == "success") {
+          [k, b] = result2
+          var aid = Number(document.getElementById("aid").value.replace(/[^0-9]/ig, ""))
+          var prediction = (aid - b) / k
+          var len = dat.length
+          var line = [
+            [dat[0][0], k * dat[0][0] + b],
+            [dat[len - 1][0], k * dat[len - 1][0] + b]
+          ]
+          if (prediction > line[1][0]){line[1] = [prediction, aid];}
+          document.getElementById("prediction159").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (时尚 → 资讯)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
+        } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
+  String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
+}
+function buttonClick164() {
+  $.getJSON("https://www.wuyingddg.cn/whenPass/bilibili_data/164.json", function(result, status) {
+    if (status == "success") {
+      dat = result.sort()
+      $.getJSON("https://www.wuyingddg.cn/whenPass/bilibili_data/164_model.json", function(result2, status) {
+        if (status == "success") {
+          [k, b] = result2
+          var aid = Number(document.getElementById("aid").value.replace(/[^0-9]/ig, ""))
+          var prediction = (aid - b) / k
+          var len = dat.length
+          var line = [
+            [dat[0][0], k * dat[0][0] + b],
+            [dat[len - 1][0], k * dat[len - 1][0] + b]
+          ]
+          if (prediction > line[1][0]){line[1] = [prediction, aid];}
+          document.getElementById("prediction164").innerHTML ='您的投稿 <font color="blue"><b>av{0}</b></font> 预计于 <font color="red"><b>{1}</b></font> 过审 (时尚 → 健身)'.format(aid, Highcharts.dateFormat('%y-%m-%d %H:%M', prediction))
         } else {alert("网络异常，请稍后再试");return}})} else {alert("网络异常，请稍后再试");return}})
   String.prototype.format = function(args) {var result = this;if (arguments.length < 1) {return result;}var data = arguments;if (arguments.length == 1 && typeof(args) == "object") {data = args;}for (var key in data) {var value = data[key];if (undefined != value) {result = result.replace("{" + key + "}", value);}}return result;}
 }
