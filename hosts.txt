@@ -1,14 +1,3 @@
-#*********************************************************
-# Copyright (c), Neko Dev Team & neoHosts Team.
-# https://github.com/neofelhz/neohosts
-#
-# This work is licensed under a MIT License.
-# https://github.com/neofelhz/neohosts/blob/data/LICENSE
-#
-#*********************************************************
-#url=https://github.com/neofelhz/neohosts
-#version=20180617030918
-#*********************************************************
 0127.adsame.com
 0aqpqdju.me
 0.r.msn.com
